@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  username: postgres
+  password:
+  pool: 5
+
+development:
+  <<: *default
+  database: cnab-parser_development
+
+
+test:
+  <<: *default
+  database: cnab-parser_test
